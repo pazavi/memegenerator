@@ -14,8 +14,9 @@ function onInit() {
     renderGallery();
     createMeme();
     setLinesHeight();
+    galleryDisplay ()
 
-    drawImg(1);
+    // drawImg(1);
     // renderMeme();
 }
 
@@ -102,6 +103,7 @@ function onImageSelect(id) {
     // console.log('image ID:', id);
     
     upDateMemeImg(id)
+    controlDisplay()
 }
 
 function onIncreaseFont() {
@@ -134,6 +136,16 @@ function onAlignCenter(){
 
 function onAlignLeft(){
     alignLeft(gLineIdx);
+}
+
+function galleryDisplay() {
+    document.querySelector('.main-container').style.display = 'none';
+    document.querySelector('.gallery-container').style.display = 'flex';   
+}
+
+function controlDisplay() {
+    document.querySelector('.main-container').style.display = 'flex';
+    document.querySelector('.gallery-container').style.display = 'none';   
 }
 
 
