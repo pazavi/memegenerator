@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+    <header>
+        <div class="logo"><h1>meme<span>.</span>gene</h1></div>
+        <div class="side-links" onclick="galleryDisplay()">Gallery</div>
+    </header>
+    <div class="main-container">
+
+        <div class="canvas-container">
+            <canvas id="my-canvas" height="400" width="400"></canvas>
+        </div>
+
+        <div class="control-container">
+            <!-- <label for="line1">Add Line:</label> -->
+            <input  class="line1" type="text" id="line1" name="line1">
+
+            <button onclick="onIncreaseFont()">A+</button> 
+            <button onclick="onDecreaseFont()">A-</button>
+            <button onclick="onMoveLineUp()">UP</button>
+            <button onclick="onMoveLineDown()">Down</button>
+            <button onclick="onSwitchLine()">Swith Line</button>
+            <button onclick="onAlignRight()">R</button>
+            <button onclick="onAlignCenter()">C</button>
+            <button onclick="onAlignLeft()">L</button>
+            <!-- <input id="font-color" type="color"/>  -->
+
+        </div>
+
+    </div>
+
+    <div class="gallery-container"></div>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
+
+
+
+    </div>
+
+    <script src="js/meme-service.js"></script>
+    <script src="js/meme-controller.js"></script>
+
+</body>
+
+</html>
