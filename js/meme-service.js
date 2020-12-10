@@ -47,9 +47,12 @@ function createMeme() {
     return gMeme;
 }
 function upDateMemeImg(id) {
-    createMeme()
+ 
     gMeme.selectedImgId = id;
     gMeme.selectedLineIdx = id - 1;
+    gMeme.lines[0].txt ='';
+    gMeme.lines[1].txt ='';
+    input.value = '';
     drawImg(gMeme.selectedImgId);
 }
 
