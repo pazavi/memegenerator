@@ -23,24 +23,45 @@
             <!-- <label for="line1">Add Line:</label> -->
             <input  class="line1" type="text" id="line1" name="line1">
 
-            <button onclick="onIncreaseFont()">A+</button> 
-            <button onclick="onDecreaseFont()">A-</button>
-            <button onclick="onMoveLineUp()">UP</button>
-            <button onclick="onMoveLineDown()">Down</button>
-            <button onclick="onSwitchLine()">Swith Line</button>
-            <button onclick="onAlignRight()">R</button>
-            <button onclick="onAlignCenter()">C</button>
-            <button onclick="onAlignLeft()">L</button>
-            <!-- <input id="font-color" type="color"/>  -->
+            <button onclick="onIncreaseFont()" class="increase-font-btn"><img src="ICONS/increase-font-icon.png" class="increase-font-icon"></button> 
+            <button onclick="onDecreaseFont()" class="decrease-font-btn"><img src="ICONS/decrease-font-icon.png" class="decrease-font-icon"></button >
+            <button onclick="onAlignRight()" class="align-left-btn"><img src="ICONS/align-to-left.png" class="align-to-left"></button>
+            <button onclick="onAlignCenter()" class="align-center-btn"><img src="ICONS/center-text-alignment.png" class="center-text-alignment"></button>
+            <button onclick="onAlignLeft()" class="align-right-btn"><img src="ICONS/align-to-right.png" class="align-to-right"></button>
+            <button onclick="onMoveLineUp()" class="up-btn"><img src="ICONS/up-button.png" class="move-up"></button>
+            <button onclick="onMoveLineDown()" class="down-btn"><img src="ICONS/down-button.png" class="move-down"></button>
+
+            <button onclick="onSwitchLine()" class="change-line-btn"><img src="ICONS/up-and-down-opposite-double-arrows-side-by-side.png" class="up-and-down-opposite-double-arrows-side-by-side"></button>
+            
+            
+            <!-- //// -->
+            <div onclick="onSetFontColor()"> <input class="font-color" type="color" name="ColorPicker1" value="#ffffff"/></div>
+            <div onclick="onSetStrokeColor()"> <input class="stroke-color" type="color" name="ColorPicker2" value="#000000"/></div>
+            <select name="font-family" class="font-family" onchange="onSetFontFamily()">
+                <option value="Impact, fantasy">Impact, fantasy</option>
+                <option value="Arial, sans-serif">Arial, sans-serif</option>
+                <option value="Helvetica, sans-serif">Helvetica, sans-serif</option>
+                <option value="Gill Sans, sans-serif">Gill Sans, sans-serif</option>
+                <option value="Lucida, sans-serif">Lucida, sans-serif</option>
+                <option value="Helvetica Narrow, sans-serif">Helvetica Narrow, sans-serif</option>
+                <option value="Times, serif">Times, serif</option>
+                <option value="Times New Roman, serif">Times New Roman, serif</option>
+                <option value="Courier New, monospace">Courier New, monospace</option>
+                <option value="cursive">cursive</option>
+              </select>
+              <a class= "download" href="#" onclick="downloadMeme(this)" download="">Download</a>
+            
+            <!-- <input id="font-color" onsubmit="onSetFontColor()" value="#FF8001" type="color"/>  -->
 
         </div>
 
     </div>
 
-    <div class="gallery-container"></div>
+    <div class="gallery-container">
+</div>
 
     <footer>
-        <h2>footer</h2>
+        <h2>meme.gene</h2>
     </footer>
 
 

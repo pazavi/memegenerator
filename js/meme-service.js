@@ -1,5 +1,13 @@
 'use strict'
 
+const newLine = {
+    txt: '',
+    font: 'Impact, fantasy',
+    size: 40,
+    align: 'center',
+    color: 'white',
+    stroke: 'black'
+}
 // var gKeywords = { 'happy': 12, 'funny puk': 1 }
 var gImgs = [
     { id: 1, url: 'imgs/1.jpg', keywords: ['politics'] },
@@ -22,6 +30,9 @@ var gImgs = [
     { id: 18, url: 'imgs/18.jpg', keywords: ['pets'] },
 ];
 
+
+
+
 var gMeme;
 
 function createMeme() {
@@ -31,27 +42,31 @@ function createMeme() {
         lines: [
             {
                 txt: '',
+                font: 'Impact, fantasy',
                 size: 40,
-                align: '',
-                color: '',
+                align: 'center',
+                color: 'white',
+                stroke: 'black'
 
             },
             {
                 txt: '',
+                font: 'Impact, fantasy',
                 size: 40,
-                align: '',
-                color: ''
+                align: 'center',
+                color: 'white',
+                stroke: 'black'
             }
         ]
     }
     return gMeme;
 }
 function upDateMemeImg(id) {
- 
+
     gMeme.selectedImgId = id;
     gMeme.selectedLineIdx = id - 1;
-    gMeme.lines[0].txt ='';
-    gMeme.lines[1].txt ='';
+    gMeme.lines[0].txt = '';
+    gMeme.lines[1].txt = '';
     input.value = '';
     drawImg(gMeme.selectedImgId);
 }
@@ -61,6 +76,7 @@ function upDateValue(text, lineIdx) {
     input.value = gMeme.lines[lineIdx].txt;
     drawImg(gMeme.selectedImgId);
 }
+
 
 function getImages() {
     return gImgs;
@@ -94,19 +110,38 @@ function moveLineDown(lineIdx) {
     drawImg(gMeme.selectedImgId);
 }
 
-function alignRight(lineIdx){
+function alignRight(lineIdx) {
     gMeme.lines[lineIdx].align = 'right';
     drawImg(gMeme.selectedImgId)
 }
 
-function alignCenter(lineIdx){
+function alignCenter(lineIdx) {
     gMeme.lines[lineIdx].align = 'center';
     drawImg(gMeme.selectedImgId)
 }
 
-function alignLeft(lineIdx){
+function alignLeft(lineIdx) {
     gMeme.lines[lineIdx].align = 'left';
     drawImg(gMeme.selectedImgId)
 }
 
+function setFontColor(fontColor, lineIdx) {
+    gMeme.lines[lineIdx].color = fontColor;
+    drawImg(gMeme.selectedImgId);
+}
+
+function setStrokeColor(strokeColor, lineIdx) {
+    gMeme.lines[lineIdx].stroke = strokeColor;
+    drawImg(gMeme.selectedImgId);
+}
+
+function setFontFamily(fontFamily, lineIdx) {
+    gMeme.lines[lineIdx].font = fontFamily;
+    drawImg(gMeme.selectedImgId)
+}
+
+
+function onAddLine(){
+    gMeme.lines.push(newLine);
+}
 
