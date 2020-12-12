@@ -56,17 +56,24 @@ h1 span {
 
 .main-container {
     max-width: 1300px;
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
     background-color: #E4E4E4;
     margin:auto; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-self: start;
-    font-size: 1rem;
- 
+    font-size: 1rem; 
 }
+
+@media screen and (max-width: 1250px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+
 
 
 canvas{
@@ -79,36 +86,49 @@ canvas{
    
 }
 
-.canvas-container{
-
-    margin: auto;
-    padding: 30px;
-    margin-left: 30px;
-    align-self: right;
-    object-fit: cover;
-
+@media screen and (max-width: 800px) {
+    canvas {
+        width:450px;
+        height:450px;
+    }
 }
-.control-container{
+@media screen and (max-width: 470px) {
+    canvas {
+        width:350px;
+        height:350px;
+    }
+}
 
+.canvas-container{
+    flex: 50%;
+    width: 50%;
+    margin-top:30px;
+    margin-bottom: 30px;;
+    display: flex;
+    justify-content: center; 
+    /* overflow: hidden; */
+}
+
+.control-container{
+    width: 50%;
+    flex: 50%;
     display: grid;
     grid-template-columns: repeat(5, 65px);
     grid-template-rows: repeat(5, 65px);
     grid-gap: 20px;
     align-items: center;
-    align-self: left;
-    justify-content: first baseline;
+    justify-content: center;
+    align-self: center; 
     /* background-color: rgb(196, 254, 141); */
     margin: auto;
-    margin-right: 60px;
-    /* margin-left: 30px; */
-    width:41%;
-    height:100%;
+    margin-top:30px;
+
   
 }
 
 
 .line1 {
-    width: 430px;
+    width: 100%;
     height: 60px;
     background-color:#ffe6c0 ;
     font-family: 'Fredoka One', cursive;
@@ -117,13 +137,15 @@ canvas{
     border-radius: 8px;
     position: relative;
     border-width: 0px;
-    /* display:flex; */
+    align-self: center;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 25px;
     grid-column: 1/span 5;
     grid-row: 1/2;
 }
+
+
 .gallery-container{
     /* background-color: rgb(254, 233, 141); */
     display: flex;
@@ -141,12 +163,19 @@ canvas{
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 30px;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     overflow: hidden;
     transition: 650ms;
     cursor: pointer; 
+}
+
+@media screen and (max-width: 450px) {
+    .gallery-item img {
+        width:400px;
+        height:400px;
+    }
 }
 
 .gallery-item img:hover{
@@ -189,10 +218,11 @@ h2 {
 
 /* --- buttons --- */
 .increase-font-btn {
+    
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 17px 11px 16px;
+    /* margin: 0px 19px 4px 18px; */
+    /* padding: 17px 11px 16px; */
     border-radius: 12px;
     border: 0px;
     background-color: #ffffff;
@@ -213,8 +243,8 @@ h2 {
 .decrease-font-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 17px 10px 16px 11px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 17px 10px 16px 11px; */
     border-radius: 12px;
     border: 0px;
     outline: none;
@@ -235,8 +265,8 @@ h2 {
 .align-left-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 15px 11px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 15px 11px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -257,8 +287,8 @@ h2 {
 .align-center-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 14px 10px 15px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 14px 10px 15px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -281,8 +311,8 @@ h2 {
 .align-right-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 14px 11px 15px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 14px 11px 15px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -302,8 +332,8 @@ h2 {
 .up-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 14px 11px 15px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 14px 11px 15px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -324,8 +354,8 @@ h2 {
 .down-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 14px 11px 15px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 14px 11px 15px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -347,8 +377,8 @@ h2 {
 .change-line-btn {
     width: 60px;
     height: 60px;
-    margin: 0px 19px 4px 18px;
-    padding: 4px 6px;
+    /* margin: 0px 19px 4px 18px;
+    padding: 4px 6px; */
     border: 0px;
     border-radius: 12px;
     outline: none;
@@ -369,10 +399,10 @@ h2 {
 
 
 .font-family {
-    width: 218px;
+    width: 100%;
     height: 60px;
-    margin: 30px 18px 10px 18px;
-    margin: 0px 19px 4px 18px;
+    /* margin: 30px 18px 10px 18px;
+    margin: 0px 19px 4px 18px; */
     border-radius: 12px;
     border-width: 0px;
     outline: none;
@@ -393,7 +423,7 @@ input[name="ColorPicker1"] {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    margin: 0px 19px 4px 18px;
+    /* margin: 0px 19px 4px 18px; */
     padding: 4px 6px;
 }
 
@@ -413,7 +443,7 @@ input[name="ColorPicker2"] {
     border-style: solid;
     border-color: black;
     border-image: initial;
-    margin: 0px 19px 4px 18px;
+    /* margin: 0px 19px 4px 18px; */
     padding: 4px 6px;
     grid-column: 5/6;
     grid-row: 4/5;
@@ -424,15 +454,16 @@ input[name="ColorPicker2"]:hover{
 
 
 
-.font-color {
-  margin-top:10 px;
 
-}
-.stroke-color {
-    margin-top:10 px;
+/* 
+@media screen and (max-width: 470px) {
+    .line1 {
+        width:350px;
+       
+    }
 
-   
-}
+} */
+
 
 /* .font-color{
     grid-column: 4/5;
