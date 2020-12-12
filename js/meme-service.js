@@ -141,7 +141,7 @@ function setFontFamily(fontFamily, lineIdx) {
 }
 
 
-function onAddLine(){
-    gMeme.lines.push(newLine);
-}
+// function onAddLine(){
+//     gMeme.lines.push(newLine);
+// }
 

@@ -251,15 +251,28 @@ footer span{
 h2 {
     font-family: 'Fredoka One', cursive;
     font-weight: normal;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     color: #FFCC8B;
     padding:12px;
     display: inline-block;
-  
-    /* margin-left: 30px; */
-    margin-right: 30px;
+    margin-top: 75px;
     line-height: 0px;
+}
+
+small {
+    /* font-family: 'Fredoka One', cursive; */
+    font-size:15px;
+    font-weight:lighter;
+    text-align: center;
+    color: #FFCC8B;
+    margin: auto;
+    text-align: center;
+    padding:12px;
+    display: block;
+    line-height: 0px;
+ 
+
 }
 
 
@@ -505,6 +518,8 @@ input[name="ColorPicker1"] {
 input[name="ColorPicker1"]:hover{
     background-color: #FFCC8B;
 }
+
+
 
 input[name="ColorPicker2"] {
     appearance: square-button;

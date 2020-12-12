@@ -162,7 +162,7 @@ function onSetStrokeColor() {
 
 function onSetFontFamily() {
     let fontFamily = document.querySelector('.font-family').value;
-    console.log('fontFamily', fontFamily)
+    // console.log('fontFamily', fontFamily)
     setFontFamily(fontFamily, gLineIdx);
 }
 
@@ -172,6 +172,6 @@ function downloadMeme(elLink) {
     elLink.download = 'my-meme.jpg';
 }
 
-function onAddLine(){
-    onAddLine();
-}
+// function onAddLine(){
+//     onAddLine();
+// }
