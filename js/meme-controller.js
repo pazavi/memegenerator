@@ -51,7 +51,7 @@ function onSwitchLine() {
 }
 
 function setLineBgc() {
-    (gLineIdx === 0) ? input.style.backgroundColor = '#ffe6c0' : input.style.backgroundColor = '#01ff01';
+    (gLineIdx === 0) ? input.style.backgroundColor = '#ffe6c0' : input.style.backgroundColor =  '#FFFFFF';
 }
 
 
