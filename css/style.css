@@ -99,6 +99,13 @@ canvas{
     }
 }
 
+@media screen and (max-width: 350px) {
+    canvas {
+        width:300;
+        height:300px;
+    }
+}
+
 .canvas-container{
     flex: 50%;
     width: 50%;
@@ -121,10 +128,14 @@ canvas{
     align-self: center; 
     /* background-color: rgb(196, 254, 141); */
     margin: auto;
-    margin-top:30px;
-
-  
+    margin-top:30px; 
 }
+@media screen and (max-width: 470px) {
+    .control-container {
+        grid-gap: 5px;
+    }
+}
+
 
 
 .line1 {
