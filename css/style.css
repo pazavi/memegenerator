@@ -101,7 +101,7 @@ canvas{
 
 @media screen and (max-width: 350px) {
     canvas {
-        width:300;
+        width:300px;
         height:300px;
     }
 }
@@ -114,6 +114,13 @@ canvas{
     display: flex;
     justify-content: center; 
     /* overflow: hidden; */
+}
+
+@media screen and (max-width: 470px) {
+    .canvas-container {
+        width:300;
+        height:300px;
+    }
 }
 
 .control-container{
@@ -132,7 +139,7 @@ canvas{
 }
 @media screen and (max-width: 470px) {
     .control-container {
-        grid-gap: 5px;
+        grid-gap: 2px;
     }
 }
 
