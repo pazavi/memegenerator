@@ -86,13 +86,43 @@ canvas{
    
 }
 
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 1300px) and (min-width:1000px) {
+    canvas {
+        width:500px;
+        height:500px;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width:900px) {
+    canvas {
+        width:500px;
+        height:500px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width:800px){
+    canvas {
+        width:470px;
+        height:470px;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width:570px){
     canvas {
         width:450px;
         height:450px;
     }
 }
-@media screen and (max-width: 470px) {
+
+@media screen and (max-width: 570px) and (min-width:470px){
+    canvas {
+        width:400px;
+        height:400px;
+    }
+}
+@media screen and (max-width: 470px)and (min-width:350px) {
     canvas {
         width:350px;
         height:350px;
