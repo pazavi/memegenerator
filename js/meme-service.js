@@ -1,13 +1,6 @@
 'use strict'
 
-const newLine = {
-    txt: '',
-    font: 'Impact, fantasy',
-    size: 40,
-    align: 'center',
-    color: 'white',
-    stroke: 'black'
-}
+
 // var gKeywords = { 'happy': 12, 'funny puk': 1 }
 var gImgs = [
     { id: 1, url: 'imgs/1.jpg', keywords: ['politics'] },
@@ -59,7 +52,7 @@ function createMeme() {
             }
         ]
     }
-    return gMeme;
+    // return gMeme;
 }
 function upDateMemeImg(id) {
 
@@ -96,8 +89,10 @@ function decreaseFont(lineIdx) {
 }
 
 function linesHeight(line1Height, line2Height) {
+    
     gMeme.lines[0].height = line1Height;
     gMeme.lines[1].height = line2Height;
+
 }
 
 function moveLineUp(lineIdx) {
@@ -141,7 +136,22 @@ function setFontFamily(fontFamily, lineIdx) {
 }
 
 
-// function onAddLine(){
-//     gMeme.lines.push(newLine);
-// }
+function addLine(){
+    let newLine = {
+        txt: '',
+        font: 'Impact, fantasy',
+        size: 40,
+        align: 'center',
+        color: 'white',
+        stroke: 'black', 
+        height: 300
+    }
+    
+    gMeme.lines.push(newLine);
+}
+
+function removeLine(lineIdx){
+    gMeme.lines.splice(lineIdx, 1); 
+    drawImg(gMeme.selectedImgId);
+}
 

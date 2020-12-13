@@ -43,10 +43,10 @@ function setValue(e) {
 }
 
 function onSwitchLine() {
-    // console.log('switch');
-    (gLineIdx === 0) ? gLineIdx = 1 : gLineIdx = 0;
-    setLineBgc();
     let currMeme = getMeme();
+   (gLineIdx< currMeme.lines.length-1)? gLineIdx+=1 : gLineIdx = 0;
+//    console.log('curr line idx:', gLineIdx)
+
     upDateValue(currMeme.lines[gLineIdx].txt, gLineIdx);
 }
 
@@ -61,30 +61,18 @@ function drawImg(id) {
     img.src = `imgs/${id}.jpg`;
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
-
-        drawText(currMeme.lines[0].txt,
-            gCanvas.width / 2,
-            currMeme.lines[0].height,
-            currMeme.lines[0].size,
-            currMeme.lines[0].font,
-            currMeme.lines[0].align,
-            currMeme.lines[0].color,
-            currMeme.lines[0].stroke
-        );
-
-
-        drawText(currMeme.lines[1].txt,
-            gCanvas.width / 2,
-            currMeme.lines[1].height,
-            currMeme.lines[1].size,
-            currMeme.lines[1].font,
-            currMeme.lines[1].align,
-            currMeme.lines[1].color,
-            currMeme.lines[1].stroke
-
-        );
+        currMeme.lines.forEach((line, idx) => {
+            drawText(currMeme.lines[idx].txt,
+                gCanvas.width / 2,
+                currMeme.lines[idx].height,
+                currMeme.lines[idx].size,
+                currMeme.lines[idx].font,
+                currMeme.lines[idx].align,
+                currMeme.lines[idx].color,
+                currMeme.lines[idx].stroke
+            );
+        });  
     }
-
 }
 
 
@@ -119,6 +107,7 @@ function onDecreaseFont() {
 function setLinesHeight() {
     let line1Height = gCanvas.height / 6;
     let line2Height = gCanvas.height / 1.16;
+ 
     linesHeight(line1Height, line2Height);
 }
 
@@ -172,6 +161,11 @@ function downloadMeme(elLink) {
     elLink.download = 'my-meme.jpg';
 }
 
-// function onAddLine(){
-//     onAddLine();
-// }
+function onAddLine(){
+    addLine();
+}
+
+function onRemoveLine(){
+    removeLine(gLineIdx);
+    onSwitchLine();
+}
